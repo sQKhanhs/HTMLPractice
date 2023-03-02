@@ -14,5 +14,23 @@
         <li>Đà Nẵng</li>
     </ol>
 </ul>
+<ul>
+<li>Hoa Kỳ</li>
+    <ol type="1">
+        <li>New York</li>
+        <li>Los Angeles</li>
+        <li>Chicago</li>
+        <li>Houston</li>
+    </ol> 
+</ul>
+<ul>
+<li>Trung Quốc</li>
+    <ol type="1">
+        <li>Beijing</li>
+        <li>Chongquing</li>
+        <li>Shanghai</li>
+        <li>Tianjin</li>
+    </ol>
+</ul>
 </body>
 </html>
