@@ -4,6 +4,9 @@
         <meta charset="UTF-8" />
         <title>FORM</title>
     </head>
+    <style>
+        .wufoo {font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;}
+    </style>
 <body>
 <form action="simpleform.html" method="get">
 <h1>ORDER FORM</h1>
@@ -14,9 +17,9 @@
     <option value="C">C (+1$)</option>
 </select>
 <p>How many would you like to order?</p>
-<input type="checkbox" name="price"/>1-10$<br>
-<input type="checkbox" name="price"/>2-20$<br>
-<input type="checkbox" name="price"/>3-25$<br>
+<input type="radio" name="price"/>1-10$<br>
+<input type="radio" name="price"/>2-20$<br>
+<input type="radio" name="price"/>3-25$<br>
 <br>
 <p>Name<span style="color:red">*</span></p>
 <input type="text" name="firstname" placeholder="FirstName" size="15">
