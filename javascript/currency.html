@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>practice</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th></th>
+                <th>From currency</th>
+                <th></th>
+                <th>To currency</th>
+            </tr>
+            <tr>
+                <td><input type=number id="Amount"></td>
+                <td></td>
+                <td><select id="from">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select></td>
+                <td></td>
+                <td><select id="to">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select></td>
+                <td></td>
+                <td><button type="button" id="cvbutton">Convert</button></td>
+            </tr>
+        </table>
+        <p id="final"></p>
+        <script>
+            let cvbutton=document.getElementById("cvbutton");
+            let result;
+            let amount=document.getElementById("Amount").value;
+            let froma=document.getElementById("from").value;
+            let to=document.getElementById("to").value;
+            cvbutton.addEventListener("click",clickfunction);
+            function clickfunction() {
+            if(froma=="USD" && to=="VND"){
+               result="Result: " + amount*23000 + " đ" 
+            } else if(froma=="VND" && to=="USD"){
+               result="Result: " + amount/23000 + " $"          
+            } else if(froma=="VND" && to=="VND"){
+               result="Result: " + amount + " đ" 
+            } else {
+               result="Result: " + amount + " $" 
+        }
+        document.getElementById("final").innerHTML= result
+    }
+        </script>
+    </body>
+</html>
