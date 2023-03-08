@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <img id="ball" src="https://contents.mediadecathlon.com/p2154023/c7952088bad8d267e0bc50ff98cbffd0/p2154023.jpg?format=auto&quality=70&f=1024x0" width="20%">
+    <p>Click the button below to move the ball :3</p>
+    <button type="button" id="left">Move left</button>
+    <button type="button" id="right">Move right</button>
+    <script>
+        let imgObj=document.getElementById("ball");
+        function init(){
+            imgObj=document.getElementById("ball")
+            imgObj.style.position = "relative";
+            imgObj.style.left = "0px";
+        }
+        let right=document.getElementById("right");
+        right.addEventListener("click",moveright);
+        function moveright(){
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + "px";
+        }
+        let left=document.getElementById("left");
+        left.addEventListener("click",moveleft);
+        function moveleft(){
+            imgObj.style.left = parseInt(imgObj.style.left) + -10 + "px";
+        }
+        window.onload = init
+    </script>
+</body>
+</html>
