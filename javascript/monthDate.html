@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <form>
+            <input type="number" id="month">
+            <button type="button" id="date">Tính số ngày</button><br>
+            <p id="display" placeholder="Nhập tháng">Kết quả</p>
+        </form>
+        <script>  
+            
+            let execute=document.getElementById("date");
+            execute.addEventListener("click",clickfunction);
+            function clickfunction(){
+                let month=document.getElementById("month").value;
+                switch (month){
+                    case "1":
+                    case "3":
+                    case "5":
+                    case "7":
+                    case "8":
+                    case "10":
+                    case "12":
+                    document.getElementById("display").innerHTML="Tháng này có 31 ngày";
+                    break;
+                    case "4":
+                    case "6":
+                    case "9":
+                    case "11":
+                    document.getElementById("display").innerHTML="Tháng này có 30 ngày";
+                    break;
+                    case "2":
+                    document.getElementById("display").innerHTML="Tháng này có 28 hoặc 29 ngày";
+                    break;
+                    default:
+                    document.getElementById("display").innerHTML="Vui lòng nhập lại";
+                }
+            }          
+        </script>
+    </body>
+</html>
