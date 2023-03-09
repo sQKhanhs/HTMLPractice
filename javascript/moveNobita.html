@@ -5,7 +5,7 @@
         <title>pratice</title>
     </head>
         <body onload="docReady()">
-            <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80">
+            <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" width="10%">
     <script>
         function upArrowPressed() {
             let element = document.getElementById("nobita");
@@ -24,7 +24,7 @@
             element.style.left = parseInt(element.style.left) + 5 + "px";
         }
         function moveSelection(evt) {
-            switch(evt.keycode) {
+            switch(evt.keyCode) {
             case 37:
                 leftArrowPressed();
                 break;

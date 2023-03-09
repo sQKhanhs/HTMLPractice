@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <form>
+        <table>
+            <tr>
+                <td colspan="4"><form><input type="text" id="math"></form></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="one">1</button></td>
+                <td><button type="button" id="two">2</button></td>
+                <td><button type="button" id="three">3</button></td>
+                <td><button type="button" id="plus" style="width:25px">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="four">4</button></td>
+                <td><button type="button" id="five">5</button></td>
+                <td><button type="button" id="six">6</button></td>
+                <td><button type="button" id="minus" style="width:25px">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" id="seven">7</button></td>
+                <td><button type="button" id="eight">8</button></td>
+                <td><button type="button" id="nine">9</button></td>
+                <td><button type="button" id="mul" style="width:25px">x</button></td>
+            </tr>
+            <tr>
+                <td><button type="reset" id="res">C</button></td>
+                <td><button type="button" id="zero">0</button></td>
+                <td><button type="button" id="result">=</button></td>
+                <td><button type="button" id="div" style="width:25px">/</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        let one=document.getElementById('one');
+        one.addEventListener("click",onefunc);
+        function onefunc(){
+            document.getElementById("math").value += "1";
+        }
+        let two=document.getElementById('two');
+        two.addEventListener("click",twofunc);
+        function twofunc(){
+            document.getElementById("math").value += "2";
+        }
+        let three=document.getElementById('three');
+        three.addEventListener("click",threefunc);
+        function threefunc(){
+            document.getElementById("math").value += "3";
+        }
+        let plus=document.getElementById('plus');
+        plus.addEventListener("click",plusfunc);
+        function plusfunc(){
+            document.getElementById("math").value += "+";
+        }
+        let four=document.getElementById('four');
+        four.addEventListener("click",fourfunc);
+        function fourfunc(){
+            document.getElementById("math").value += "4";
+        }
+        let five=document.getElementById('five');
+        five.addEventListener("click",fivefunc);
+        function fivefunc(){
+            document.getElementById("math").value += "5";
+        }
+        let six=document.getElementById('six');
+        six.addEventListener("click",sixfunc);
+        function sixfunc(){
+            document.getElementById("math").value += "6";
+        }
+        let minus=document.getElementById('minus');
+        minus.addEventListener("click",minusfunc);
+        function minusfunc(){
+            document.getElementById("math").value += "-";
+        }
+        let seven=document.getElementById('seven');
+        seven.addEventListener("click",sevenfunc);
+        function sevenfunc(){
+            document.getElementById("math").value += "7";
+        }
+        let eight=document.getElementById('eight');
+        eight.addEventListener("click",eightfunc);
+        function eightfunc(){
+            document.getElementById("math").value += "8";
+        }
+        let nine=document.getElementById('nine');
+        nine.addEventListener("click",ninefunc);
+        function ninefunc(){
+            document.getElementById("math").value += "9";
+        }
+        let mul=document.getElementById('mul');
+        mul.addEventListener("click",mulfunc);
+        function mulfunc(){
+            document.getElementById("math").value += "*";
+        }
+        let zero=document.getElementById('zero');
+        zero.addEventListener("click",zerofunc);
+        function zerofunc(){
+            document.getElementById("math").value += "0";
+        }
+        let result=document.getElementById('result');
+        result.addEventListener("click",resultfunc);
+        function resultfunc(){
+            document.getElementById("math").value= "" + eval(document.getElementById("math").value)
+        }
+        let div=document.getElementById('div');
+        div.addEventListener("click",divfunc);
+        function divfunc(){
+            document.getElementById("math").value += "/";
+        }
+    </script>
+    </body>
+</html>
