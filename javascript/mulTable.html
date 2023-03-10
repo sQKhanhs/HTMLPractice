@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+        let a,b;
+        let tab = "<table border='1' width='250' cellspacing='0'>"
+            for(a=1;a<=10;a++){
+                tab = tab + "<tr>"
+                    for(b=1;b<=10;b++){
+                        tab = tab + "<td align='center'>"+(a*b)+"</td>";
+                    }
+                tab = tab + "</tr>"
+            }
+            tab = tab + "</table>"
+        document.write(tab);
+    </script>
+</body>
+</html>
