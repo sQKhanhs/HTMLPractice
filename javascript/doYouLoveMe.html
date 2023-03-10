@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body> 
+    <h1 style="color:pink" align="center">DO YOU LOVE ME?:3</h1>
+    <button type="button" id="yes" style="position:absolute;width:100px; height:50px; left:650px;top:100px">YES</button>
+                        <button type="button" id="no" style="position:absolute;width:100px; height:50px;left:800px;top:100px">NO</button>
+    <script>
+        let yes=document.getElementById("yes");
+        yes.addEventListener("click",clickfunction);
+        function clickfunction(){
+            alert("Love u too UwU");
+        }
+            let no=document.getElementById("no");
+            no.addEventListener("mouseover",movebutton);
+            function movebutton(){
+            no.style.left =Math.random()*window.innerHeight + "px"
+            no.style.top =Math.random()*window.innerWidth + "px"
+        }
+        
+    </script>
+</body>
+</html>
