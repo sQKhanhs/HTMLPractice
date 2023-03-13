@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+        let a=2;
+        
+        let b=1;
+        let tab="<table border='1'>";
+        while(b<=9){
+            tab+="<tr>";
+                while(a<=9){
+                    tab+="<td>"+a+"x"+b+"="+(a*b)+"</td>";
+                    a++
+                }
+            a=2
+            b++
+            tab+="</tr>";
+        } tab+="</table>";
+        document.write(tab);    
+    </script>
+</body>
+</html>
