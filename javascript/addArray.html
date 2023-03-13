@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <input type="text" id="inp">
+    <button type="button" id="add">ADD</button>
+    <button type="button" id="display">DISPLAY</button>
+    <div id="result"></div>
+    <script>
+        let x=0;
+        let a= Array();
+        let add=document.getElementById("add")
+        add.addEventListener("click",addfunction);
+        function addfunction() {
+            a[x]=document.getElementById("inp").value;
+            x++;
+            document.getElementById("inp").value="";
+        }
+        let display=document.getElementById("display");
+        display.addEventListener("click",displayfunction);
+        function displayfunction(){
+            let as="<p>"
+            for(x=0;x<a.length;x++){
+                as+="Element "+a[x]+" at index "+x+"</p>";
+            }
+            document.getElementById("result").innerHTML=as
+        }
+    </script>
+</body>
+</html>
