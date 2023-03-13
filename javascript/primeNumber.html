@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+    <p id="print"></p>
+    <script>
+        let numb=Number(prompt("Nhập số lượng số nguyên tố cần in ra"));
+        let count=0
+        let n=2;
+        while(count<numb){
+            let i;
+            let i2;
+            if(n<=3){
+                document.getElementById("print").innerHTML+=n + "<br>"
+                n++;
+                count++;  
+                } else{
+                for(i=2;i<n;i++){
+                    if (n%i==0){
+                        i2=false
+                        break;
+                    }
+                }
+                }if (i2==false){
+                        n++
+                    } else {
+                        document.getElementById("print").innerHTML+=n + "<br>"
+                        n++;
+                        count++;  
+                    }
+                }              
+    </script>
+    </body>
+</html>
