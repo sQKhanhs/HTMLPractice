@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <button type="button" id="reverse">REVERSE</button>
+    <script>
+        let a=[1,2,3,4,5,6,7]
+        let x=0
+        let x1=a.length-1
+        let rev=document.getElementById("reverse")
+        rev.addEventListener("click",clickfunction);
+        function clickfunction(){
+            while(x<x1){
+                let b=a[x]
+                a[x]=a[x1]
+                a[x1]=b
+                x++;
+                x1--;
+            }
+            document.write(a);
+            }
+    </script>
+    </body>
+</html>
