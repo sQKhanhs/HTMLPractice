@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <button type="button" id="sort">SORT</button>
+    <script>
+        let a=(prompt("Input number"));
+        let b=a.split("")
+        let c=[b[0]];
+        let sort=document.getElementById("sort");
+        sort.addEventListener("click",function1);
+        function function1(){
+            for(let x=1;x<b.length;x++){
+                if(Number(b[x])%2==0 && Number(b[x-1]%2==0)){
+                    c.push("-",b[x]);
+            }       else if(Number(b[x])%2==0 && Number(b[x-1]%2)!=0){
+                                if(Number(b[x+1])%2!=0 && b[x+1]!=undefined){
+                                    c.push(b[x],"-");
+                                } else{
+                                  c.push(b[x]);
+                                }
+                            }else{
+                            c.push(b[x]);
+            }
+        } 
+            let c1=c.join("");
+            document.write(c1);
+        }
+    </script>
+    </body>
+</html>
