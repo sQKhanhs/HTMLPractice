@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <h1>CARO GAME</h1>
+        <div id="table"></div>
+        <button type="button" id="change">CHANGE VALUE</button>
+        <script>
+        let z="<table border='0'>"
+        let a=[
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ]
+        for(let x=0;x<a.length;x++){
+            z+="<tr>"
+            for(let y=0;y<a[x].length;y++){
+            z+="<td>" + a[x][y] + "</td>"
+        } z+="</tr>"
+        } z+="</table>"  
+        document.getElementById("table").innerHTML=z
+        let change=document.getElementById("change");
+        change.addEventListener("click",click);
+        function click(){
+            let x1=Number(prompt("Input x"));
+            let y1=Number(prompt("Input y"));
+            a[x1][y1]="X"
+            z= undefined
+            z="<table border='0'>"
+            for(let x=0;x<a.length;x++){
+            z+="<tr>"
+            for(let y=0;y<a[x].length;y++){
+            z+="<td>" + a[x][y] + "</td>"
+        } z+="</tr>"
+        } z+="</table>"  
+        document.getElementById("table").innerHTML=z
+    }
+        </script>
+    </body>
+</html>
