@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <h1>CARO GAME</h1>
+        <div id="table"></div>
+        <button type="button" id="changex">INPUT X</button>
+        <button type="button" id="changeo">INPUT O</button>
+        <p id="result"></p>
+        <script>
+        let z="<table border='0'>"
+        let a=[
+            ["▣","▣","▣"],
+            ["▣","▣","▣"],
+            ["▣","▣","▣"]
+        ]
+        for(let x=0;x<a.length;x++){
+            z+="<tr>"
+            for(let y=0;y<a[x].length;y++){
+            z+="<td>" + a[x][y] + "</td>"
+        } z+="</tr>"
+        } z+="</table>"  
+        document.getElementById("table").innerHTML=z
+        
+        let changex=document.getElementById("changex");
+        changex.addEventListener("click",click1);
+        function click1(){
+            let x1=Number(prompt("Input x"));
+            let y1=Number(prompt("Input y"));
+            a[x1][y1]="X"
+            z= undefined
+            z="<table border='0'>"
+            for(let x=0;x<a.length;x++){
+            z+="<tr>"
+            for(let y=0;y<a[x].length;y++){
+            z+="<td>" + a[x][y] + "</td>"
+        } z+="</tr>"
+        } z+="</table>"  
+        document.getElementById("table").innerHTML=z
+        for(let x=0; x<a.length; x++){
+                for (let y=0; y<a[x].length; y++){
+                    if (a[x][y] === 'X' && a[x][y+1] === 'X' && a[x][y+2] === 'X' ||
+                        a[x][y] === 'X' && a[x+1][y] === 'X' && a[x+2][y] === 'X' ||
+                        a[x][y] === 'X' && a[x+1][y+1] === 'X' && a[x+2][y+2] === 'X'){
+                        document.getElementById("result").innerHTML="X Win";
+                    }
+                }
+            }
+        }
+
+        let changeo=document.getElementById("changeo");
+        changeo.addEventListener("click",click2);
+        function click2(){
+            let x2=Number(prompt("Input x"));
+            let y2=Number(prompt("Input y"));
+            a[x2][y2]="O"
+            z= undefined
+            z="<table border='0'>"
+            for(let x=0;x<a.length;x++){
+            z+="<tr>"
+            for(let y=0;y<a[x].length;y++){
+            z+="<td>" + a[x][y] + "</td>"
+        } z+="</tr>"
+        } z+="</table>"  
+        document.getElementById("table").innerHTML=z
+        for(let x=0; x<a.length; x++){
+                for (let y=0; y<a[x].length; y++){
+                    if (a[x][y] === 'O' && a[x][y+1] === 'O' && a[x][y+2] === 'O' ||
+                        a[x][y] === 'O' && a[x+1][y] === 'O' && a[x+2][y] === 'O' ||
+                        a[x][y] === 'O' && a[x+1][y+1] === 'O' && a[x+2][y+2] === 'O'){
+                        document.getElementById("result").innerHTML="O Win";
+                    }
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
