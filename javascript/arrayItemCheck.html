@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Practice</title>
+</head>
+<body>
+    <script>
+        let a=prompt("Input value");
+        let b=new Array(1,2,3,4,5,6);
+        let x,x1;
+        for(x=0;x<b.length;){
+            if (a==b[x]){
+                alert(a + " is an array's item")
+                x1=false
+                break;
+            } else{
+                x1=true;
+                x++;
+            }
+        } if (x1==true){
+            alert(a + " is not an array's item");
+        }
+    </script>
+</body>
+</html>
