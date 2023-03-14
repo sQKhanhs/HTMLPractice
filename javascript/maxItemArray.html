@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <button type="button" id="max">FIND MAX</button>
+    <script>
+        let a=[1,-2,13,24,19,55,7]
+        let x=a.length-1
+        let max=document.getElementById("max");
+        max.addEventListener("click",click);
+        function click(){
+            a.sort(function(a,b){
+                return a - b
+            });
+        alert("Max item is " + a[x])
+        }
+    </script>
+    </body>
+</html>
