@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <button type="button" id="switch">SWITCH</button>
+    <script>
+        let a=(prompt("Input text"));
+        let b=a.split("")
+        let d=document.getElementById("switch");
+        d.addEventListener("click",checkUpLower);
+        function checkUpLower(){
+            for(x=0;x<b.length;x++){
+                if(b[x]==b[x].toLowerCase){
+                    b[x].toUpperCase()
+                } else{
+                    b[x].toLowerCase()
+                }
+            }
+            let b1=b.join("");
+            document.write(b1);
+        }
+    </script>
+    </body>
+    </html>
