@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkConfirm(option){
+        let result;
+        if(option){
+            result = "Let's gooooo! ";
+        } else{
+            result = "F*** off!";  
+        } return result;  
+    }
+
+    let answer = confirm("Shall we go all in?");
+    let reply = checkConfirm(answer);
+    alert(reply);
+</script>
+</body>
+</html>
