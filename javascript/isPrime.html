@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>Pratice</title>
+    </head>
+    <body>
+        <script>
+        let display1 = [];
+        let a=Number(prompt("Find prime numbers below this number"));
+         function isPrime(number){
+            for(let x=number-1;x>1;x--){
+                let result;
+                for(let i=x-1;i>1;i--){
+                    if(x%i == 0){
+                        result = false;
+                        break;
+                    } else{
+                        result = true;
+                    } console.log(i)
+                } if (result == true){
+                    display1.push(x);
+                }
+            }
+        }
+        function display(){
+            display1.reverse();
+            display1.unshift(2);
+            document.write(display1);
+        }
+        isPrime(a);
+        display();
+        </script>
+    </body>
+</html>
