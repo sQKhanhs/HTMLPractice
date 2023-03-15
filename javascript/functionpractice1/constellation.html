@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <script>
+         let starName = prompt("Enter star name");
+         let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+         let constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+         function displayConstellation(){
+            let result;
+            for(i=0;i<star.length;i++){
+                if(starName == star[i]){
+                    alert(constellation[i])
+                    result = true;
+                    break;
+                } else{
+                    result = false;
+                }
+            } if(result == false ){
+                alert("Can't find constellation!");
+            }
+         }
+         displayConstellation()
+        </script>
+    </body>
+</html>
