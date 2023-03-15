@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <label>Farenheit:</label>
+        <input type="number" id="Farenheit" onchange="temperatureChange()" oninput="temperatureChange()">
+        <p id="result"></p>
+    <script>
+        function temperatureChange(){
+            function farenheitToCelcius(farenheit){
+            return (farenheit-32)/(1.8);
+            }
+            let f=document.getElementById("Farenheit");
+            let result=farenheitToCelcius(f.value);
+            document.getElementById("result").innerHTML="Celcius: " + result;
+        }
+    </script>
+    </body>
+</html>
