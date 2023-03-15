@@ -6,14 +6,16 @@
     </head>
     <body>
         <label>Farenheit:</label>
-        <input type="number" id="Farenheit" onchange="temperatureChange()" oninput="temperatureChange()">
+        <input type="number" id="Farenheit">
         <p id="result"></p>
     <script>
+        let f=document.getElementById("Farenheit");
+        f.addEventListener("change",temperatureChange)
+        f.addEventListener("input",temperatureChange)
         function temperatureChange(){
             function farenheitToCelcius(farenheit){
             return (farenheit-32)/(1.8);
             }
-            let f=document.getElementById("Farenheit");
             let result=farenheitToCelcius(f.value);
             document.getElementById("result").innerHTML="Celcius: " + result;
         }
