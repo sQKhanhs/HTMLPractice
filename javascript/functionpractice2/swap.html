@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <p id="result"></p>
+        <button type = "button" id="swap">swap</button>
+        <script>
+        let a = prompt("Input a");
+        let b = prompt("Input b");
+        let array = [a,b];
+        document.getElementById("result").innerHTML = array;
+        let swap = document.getElementById("swap");
+        swap.addEventListener("click",swapNum);
+        function swapNum(){
+            let temp = array[0];
+            array[0] = array[1];
+            array[1] = temp;
+            document.getElementById("result").innerHTML = array;
+        }
+
+        </script>
+    </body>
+</html>

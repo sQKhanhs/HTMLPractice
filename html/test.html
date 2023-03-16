@@ -6,19 +6,15 @@
 </head>
     <body>     
     <script>
-        function sum(a, b) {
-            total=a+b;   
-        }
-        sum(3,2)
-        console.log(total)
-        console.log((sum(3,2)))
-        
-        function sum(a, b) {
-            return total=a+b;   
-        }
-        sum(3,2)
-        console.log(total)
-        console.log(sum(3,2))
+    function Apple (type) {
+    this.type = type;
+    this.color = "red";
+    this.getInfo = function() {
+    return this.color + ' ' + this.type + ' apple';;
+}
+    }
+    let apple = new Apple("IP6")
+    alert(apple.getInfo())
     </script>
     </body>
 </html>

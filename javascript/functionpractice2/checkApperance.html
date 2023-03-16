@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <script>
+        function checkApper(a,b){
+            let count = 0;
+            let result
+            for(i=0;i<a.length;i++){
+                if(b === a[i]){
+                count++;    
+                } else if(count != 0){
+                    result = true  
+                } else {
+                    result = false
+                }
+            }
+            if (result == true){
+                    alert(b + " appear " + count + " time");
+                } else{
+                    alert(-1);
+                }
+        }
+        let array = ["A","A","B", "A","A","B"];
+        let b = "A"
+        checkApper(array,b);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <script>
+        let num1 = prompt("Enter first number");
+        let num2 = prompt("Enter second number");  
+        let num3 = prompt("Enter third number");
+        function findMin(a,b,c){
+            let array = [a,b,c];
+            array.sort(function(a,b){
+                return a - b;
+            })
+            alert("Min number is " + array[0]);   
+        }
+        findMin(num1,num2,num3);     
+        </script>
+    </body>
+</html>
