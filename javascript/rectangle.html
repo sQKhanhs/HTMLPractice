@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+    <canvas id="sheet" width="1000" height="500" style="border: 1px solid black"></canvas><br>
+        <script>
+        let ctx = document.getElementById("sheet").getContext("2d");
+        function Rect(x,y){
+        this.x = x;
+        this.y = y;
+        this.setX = function(x){
+            this.x = x;
+        }
+        this.setY = function(y){
+            this.y = y;
+        }
+        this.perimeter = function(){
+            return 2*(this.x+this.y);
+        }
+        this.area = function(){
+            return (this.x*this.y);
+        }
+        this.draw = function(){
+            ctx.beginPath();
+            ctx.rect(30,30,this.x,this.y);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+        }
+        }
+        let rectangle = new Rect(500,200);
+        rectangle.setX(300);
+        rectangle.draw();
+        document.write("Perimeter = " + rectangle.perimeter() + "<br>" + " Area = " + rectangle.area());
+            
+        </script>
+    </body>
+</html>
