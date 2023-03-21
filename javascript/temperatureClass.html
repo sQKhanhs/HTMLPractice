@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <title>pratice</title>
+    </head>
+    <body>
+        <script>
+        let Temperature = function(x){
+            this.x = x;
+            this.fConvert = function(){
+                return (this.x*(9/5)+32) + "F";
+            }
+            this.kConvert = function(){
+                return (this.x + 273.15) + 'K';
+            }
+        }
+        let c = new Temperature(25);
+        document.write("F:" + c.fConvert() + "<br>" + " K: " + c.kConvert());  
+        </script>
+    </body>
+</html>
