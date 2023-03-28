@@ -81,9 +81,9 @@
     this.width = width;
     this.height = height;
     this.frame = 0;
+    this.markedForDeletion = false;
     this.sound = new Audio();
     this.sound.src = "duckQuack.mp3";
-    this.markedForDeletion = false;
     this.timeSinceLastFrame = 0;
     this.frameInterval = 200;
     this.update = function(deltaTime){
