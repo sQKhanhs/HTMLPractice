@@ -216,15 +216,15 @@
         drawTimer();
         drawGameWin(); 
         winsound.play();
-    } else if(gameOver == false){
-        requestAnimationFrame(animate)
-    } else{
+    } else if(gameOver == true){
         bgsound.pause();
         ctx.drawImage(background,0,0,canvas.width,canvas.height);
         drawDuckToShoot();
         drawTimer();
         drawGameOver();
         losesound.play();
+    } else{
+        requestAnimationFrame(animate)
     }
     }
     animate();
