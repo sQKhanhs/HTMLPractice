@@ -37,7 +37,6 @@
     this.image = new Image();
     this.image.src = "duckMoveLeft.png";
     this.frame = 0;
-    this.maxFrame = 2;
     this.timeSinceFlap = 0;
     this.flapInterval = Math.random()*50+150;
     this.randomColor = [Math.floor(Math.random()*255),Math.floor(Math.random()*255),Math.floor(Math.random()*255)]
@@ -53,7 +52,7 @@
         }
         this.timeSinceFlap += deltaTime;
         if(this.timeSinceFlap > this.flapInterval){
-            if (this.frame < this.maxFrame){
+            if (this.frame < 2){
         this.frame++;
         this.timeSinceFlap = 0
             } else{

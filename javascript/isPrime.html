@@ -6,30 +6,23 @@
     </head>
     <body>
         <script>
-        let display1 = [];
-        let a=Number(prompt("Find prime numbers below this number"));
-         function isPrime(number){
-            for(let x=number-1;x>1;x--){
-                let result;
-                for(let i=x-1;i>1;i--){
-                    if(x%i == 0){
-                        result = false;
+        function sumPrime(x){
+            let sum = 2; let isPrime = true;
+            for(let a = 3; a <= x; a++){
+                isPrime = true;
+                for(let b = 2; b < a; b++){
+                    if(a % b == 0){
+                        isPrime = false;
                         break;
-                    } else{
-                        result = true;
-                    } console.log(i)
-                } if (result == true){
-                    display1.push(x);
+                    }
+                }
+                if(isPrime == true){
+                    sum += a;
                 }
             }
+            return sum;
         }
-        function display(){
-            display1.reverse();
-            display1.unshift(2);
-            document.write(display1);
-        }
-        isPrime(a);
-        display();
+        document.write(sumPrime(10));
         </script>
     </body>
 </html>
